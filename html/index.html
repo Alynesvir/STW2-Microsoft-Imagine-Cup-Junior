@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clothing Suggestions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to GreenThreads!</h1>
+    <h2>Unsure about how to find the right type of sustainable clothing for you? Try the picker below :)</h2>
+    <h3></h3>
+    <form method="POST" action="/suggestions">
+        <label for="type">What would you like to wear?</label>
+        <br>
+        <input type="color" name="color" placeholder="Choose a color">
+        <br>
+        <select name="style">
+          <option value="casual">Casual</option>
+          <option value="business">Business</option>
+          <option value="formal">Formal</option>
+        </select>
+        <br>
+        <select name="design">
+          <option value="plain">Plain</option>
+          <option value="striped">Striped</option>
+          <option value="plaid">Plaid</option>
+        </select>
+        <br>
+        <select name="size">
+          <option value="small">Small (36-38)</option>
+          <option value="medium">Medium (40-42)</option>
+          <option value="large">Large (44-46)</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
